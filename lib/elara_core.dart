@@ -15,3 +15,4 @@ export 'src/engines/drip_engine.dart';
 export 'src/fusion/elara_fusion.dart';
 export 'src/phase/phase_classifier.dart';
 export 'src/environment/severity_modifier.dart';
+export 'src/action/action_engine.dart';
