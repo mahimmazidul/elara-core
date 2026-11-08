@@ -1,0 +1,15 @@
+name: elara_core
+description: >
+  ELARA is an offline, pure Dart ensemble for menstrual cycle forecasts,
+  phase estimates, and environmental and action guidance.
+version: 0.1.0
+homepage: https://github.com/mahimmazidul/elara-core
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies: {}
+
+dev_dependencies:
+  test: ^1.24.0
+  lints: ^3.0.0
