@@ -1,0 +1,37 @@
+{
+  "source_sha256": "ad67a3eed731a038d6502a1eb42a9dcddf8f6c69a607a61b85f3798198043dac",
+  "conception_status_rows": {
+    "missing": 7,
+    "no": 3137,
+    "yes": 180
+  },
+  "counts": {
+    "eligible_forecasts": 2556,
+    "eligible_target_lengths_outside_15_50": 41,
+    "excluded_pair_nonconsecutive_cycle_number": 186,
+    "excluded_pair_reported_length_next_start_mismatch": 1,
+    "participants_total": 581,
+    "participants_with_eligible_forecasts": 497,
+    "rows_without_reported_length": 180,
+    "segments_including_singletons": 768,
+    "terminal_rows_without_following_row": 581,
+    "total_rows": 3324,
+    "within_person_adjacent_row_pairs": 2743
+  },
+  "forecasts_by_number_of_prior_completed_cycles": {
+    "0": 588,
+    "1": 469,
+    "2": 379,
+    "3": 294,
+    "4": 217,
+    "5": 168,
+    "6": 131,
+    "7": 109,
+    "8": 77,
+    "9": 56,
+    "10": 36,
+    "11": 17,
+    "12": 13,
+    "13": 2
+  }
+}

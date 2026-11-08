@@ -3,3 +3,9 @@
 .pub/
 pubspec.lock
 coverage/
+
+# Keep local evaluation datasets and per-person predictions out of Git.
+test/backtest/data/
+test/backtest/*.csv
+test/backtest/*.jsonl
+test/backtest/__pycache__/
