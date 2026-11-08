@@ -1,0 +1,2437 @@
+{
+  "source": "sympto 3.0.2, commit cd7b99fd4c70d69d438cdedac464951bbb599116, AGPL-3.0-or-later",
+  "fixtures": {
+    "cycleWithFhm": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 37,
+        "mucus": 2
+      }
+    ],
+    "cycleWithoutFhm": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 37,
+        "mucus": 2
+      }
+    ],
+    "longAndComplicatedCycle": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.95,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-25",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-27",
+        "temperature": 37,
+        "mucus": 1
+      }
+    ],
+    "cycleWithTempAndNoMucusShift": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-08",
+        "temperature": 36.55,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-11",
+        "temperature": 36.6,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.95,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-23",
+        "temperature": 37,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-24",
+        "temperature": 36.95,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-27",
+        "temperature": 37,
+        "mucus": 4
+      }
+    ],
+    "cycleWithEarlyMucus": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-08",
+        "temperature": 36.55,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-11",
+        "temperature": 36.6,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.95,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-23",
+        "temperature": 37,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-24",
+        "temperature": 36.95,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-27",
+        "temperature": 37,
+        "mucus": 4
+      }
+    ],
+    "cycleWithMucusOnFirstDay": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-08",
+        "temperature": 36.55,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-11",
+        "temperature": 36.6,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.95,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-23",
+        "temperature": 37,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-24",
+        "temperature": 36.95,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-27",
+        "temperature": 37,
+        "mucus": 4
+      }
+    ],
+    "cycleWithoutAnyShifts": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-07",
+        "temperature": 36.85,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-08",
+        "temperature": 36.55,
+        "mucus": 1
+      }
+    ],
+    "fiveDayCycle": [
+      {
+        "date": "2018-06-01",
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-03",
+        "bleeding": 3
+      }
+    ],
+    "mucusPeakAndFhmOnSameDay": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-25",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-27",
+        "temperature": 37,
+        "mucus": 1
+      }
+    ],
+    "mucusPeakOnLastDayOfTempEval": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.95,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-25",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 1
+      }
+    ],
+    "mucusPeakAfterLastDayOfTempEval": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-25",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 1
+      }
+    ],
+    "mucusPeakOnAndAfterLastDayOfTempEval": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 37,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-25",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 1
+      }
+    ],
+    "mucusPeakTwoDaysBeforeFhm": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 2
+      },
+      {
+        "date": "2018-07-02",
+        "temperature": 36.9,
+        "mucus": 3
+      },
+      {
+        "date": "2018-07-03",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-07-04",
+        "temperature": 36.9,
+        "mucus": 2
+      }
+    ],
+    "mucusPeak5DaysAfterFhm": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.7,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.95,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-25",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-30",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-07-01",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-07-02",
+        "temperature": 37,
+        "mucus": 1
+      }
+    ],
+    "highestMucusQualityAfterEndOfEval": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.7,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.95,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-25",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-30",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-07-01",
+        "temperature": 37,
+        "mucus": 4
+      },
+      {
+        "date": "2018-07-02",
+        "temperature": 37,
+        "mucus": 1
+      }
+    ],
+    "fhm5DaysAfterMucusPeak": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.6,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.65,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.8,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.75,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.85,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.95,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-25",
+        "temperature": 37,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-26",
+        "temperature": 36.9,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-27",
+        "temperature": 37,
+        "mucus": 1
+      }
+    ],
+    "fhmOnDay12": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-12",
+        "temperature": 36.9,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 37,
+        "mucus": 2
+      }
+    ],
+    "fhmOnDay15": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-05",
+        "temperature": 36.65
+      },
+      {
+        "date": "2018-06-06",
+        "temperature": 36.8,
+        "mucus": 0
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.6,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.5,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.9,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 37,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 37,
+        "mucus": 2
+      }
+    ],
+    "mucusPeakSlightlyBeforeTempShift": [
+      {
+        "date": "2018-06-01",
+        "temperature": 36.7,
+        "bleeding": 2
+      },
+      {
+        "date": "2018-06-02",
+        "temperature": 36.75
+      },
+      {
+        "date": "2018-06-04",
+        "temperature": 36.7
+      },
+      {
+        "date": "2018-06-07",
+        "temperature": 36.5,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-08",
+        "temperature": 36.45,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-09",
+        "temperature": 36.5,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-10",
+        "temperature": 36.55,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-11",
+        "temperature": 36.5,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-12",
+        "temperature": 36.55,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-13",
+        "temperature": 36.55,
+        "mucus": 4
+      },
+      {
+        "date": "2018-06-14",
+        "temperature": 36.65,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-15",
+        "temperature": 36.7,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-16",
+        "temperature": 36.7,
+        "mucus": 3
+      },
+      {
+        "date": "2018-06-17",
+        "temperature": 36.65,
+        "mucus": 2
+      },
+      {
+        "date": "2018-06-18",
+        "temperature": 36.7,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-19",
+        "temperature": 36.8,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-20",
+        "temperature": 36.85,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-21",
+        "temperature": 36.9,
+        "mucus": 1
+      },
+      {
+        "date": "2018-06-22",
+        "temperature": 36.9,
+        "mucus": 1
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "label": "cycleWithFhm: no previous",
+      "cycle": "cycleWithFhm",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-18",
+        "postStart": "2018-06-18",
+        "firstHigh": "2018-06-15",
+        "tempEnd": "2018-06-18",
+        "rule": 1,
+        "coverLine": 36.9,
+        "mucusPeak": "2018-06-13",
+        "mucusEnd": "2018-06-17"
+      }
+    },
+    {
+      "label": "cycleWithFhm: previous complete",
+      "cycle": "cycleWithFhm",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-18",
+        "postStart": "2018-06-18",
+        "firstHigh": "2018-06-15",
+        "tempEnd": "2018-06-18",
+        "rule": 1,
+        "coverLine": 36.9,
+        "mucusPeak": "2018-06-13",
+        "mucusEnd": "2018-06-17"
+      }
+    },
+    {
+      "label": "cycleWithoutFhm: no previous",
+      "cycle": "cycleWithoutFhm",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "cycleWithoutFhm: previous complete",
+      "cycle": "cycleWithoutFhm",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "longAndComplicatedCycle: no previous",
+      "cycle": "longAndComplicatedCycle",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    },
+    {
+      "label": "longAndComplicatedCycle: previous complete",
+      "cycle": "longAndComplicatedCycle",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    },
+    {
+      "label": "cycleWithTempAndNoMucusShift: no previous",
+      "cycle": "cycleWithTempAndNoMucusShift",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "cycleWithTempAndNoMucusShift: previous complete",
+      "cycle": "cycleWithTempAndNoMucusShift",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "cycleWithEarlyMucus: no previous",
+      "cycle": "cycleWithEarlyMucus",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "cycleWithEarlyMucus: previous complete",
+      "cycle": "cycleWithEarlyMucus",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-01",
+        "periStart": "2018-06-02",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "cycleWithMucusOnFirstDay: no previous",
+      "cycle": "cycleWithMucusOnFirstDay",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "cycleWithMucusOnFirstDay: previous complete",
+      "cycle": "cycleWithMucusOnFirstDay",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "cycleWithoutAnyShifts: no previous",
+      "cycle": "cycleWithoutAnyShifts",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "cycleWithoutAnyShifts: previous complete",
+      "cycle": "cycleWithoutAnyShifts",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "fiveDayCycle: no previous",
+      "cycle": "fiveDayCycle",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "fiveDayCycle: previous complete",
+      "cycle": "fiveDayCycle",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": null,
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "mucusPeakAndFhmOnSameDay: no previous",
+      "cycle": "mucusPeakAndFhmOnSameDay",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-20",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    },
+    {
+      "label": "mucusPeakAndFhmOnSameDay: previous complete",
+      "cycle": "mucusPeakAndFhmOnSameDay",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-20",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    },
+    {
+      "label": "mucusPeakOnLastDayOfTempEval: no previous",
+      "cycle": "mucusPeakOnLastDayOfTempEval",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-25",
+        "postStart": "2018-06-25",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-20",
+        "mucusEnd": "2018-06-25"
+      }
+    },
+    {
+      "label": "mucusPeakOnLastDayOfTempEval: previous complete",
+      "cycle": "mucusPeakOnLastDayOfTempEval",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-25",
+        "postStart": "2018-06-25",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-20",
+        "mucusEnd": "2018-06-25"
+      }
+    },
+    {
+      "label": "mucusPeakAfterLastDayOfTempEval: no previous",
+      "cycle": "mucusPeakAfterLastDayOfTempEval",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-26",
+        "postStart": "2018-06-26",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-20",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-21",
+        "mucusEnd": "2018-06-26"
+      }
+    },
+    {
+      "label": "mucusPeakAfterLastDayOfTempEval: previous complete",
+      "cycle": "mucusPeakAfterLastDayOfTempEval",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-26",
+        "postStart": "2018-06-26",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-20",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-21",
+        "mucusEnd": "2018-06-26"
+      }
+    },
+    {
+      "label": "mucusPeakOnAndAfterLastDayOfTempEval: no previous",
+      "cycle": "mucusPeakOnAndAfterLastDayOfTempEval",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-26",
+        "postStart": "2018-06-26",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-20",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-21",
+        "mucusEnd": "2018-06-26"
+      }
+    },
+    {
+      "label": "mucusPeakOnAndAfterLastDayOfTempEval: previous complete",
+      "cycle": "mucusPeakOnAndAfterLastDayOfTempEval",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-26",
+        "postStart": "2018-06-26",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-20",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-21",
+        "mucusEnd": "2018-06-26"
+      }
+    },
+    {
+      "label": "mucusPeakTwoDaysBeforeFhm: no previous",
+      "cycle": "mucusPeakTwoDaysBeforeFhm",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-07-03",
+        "postStart": "2018-07-03",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-07-03",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-16",
+        "mucusEnd": "2018-07-02"
+      }
+    },
+    {
+      "label": "mucusPeakTwoDaysBeforeFhm: previous complete",
+      "cycle": "mucusPeakTwoDaysBeforeFhm",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-04",
+        "periStart": "2018-06-05",
+        "periEnd": "2018-07-03",
+        "postStart": "2018-07-03",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-07-03",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-16",
+        "mucusEnd": "2018-07-02"
+      }
+    },
+    {
+      "label": "mucusPeak5DaysAfterFhm: no previous",
+      "cycle": "mucusPeak5DaysAfterFhm",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-22",
+        "postStart": "2018-06-22",
+        "firstHigh": "2018-06-19",
+        "tempEnd": "2018-06-22",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-09",
+        "mucusEnd": "2018-06-14"
+      }
+    },
+    {
+      "label": "mucusPeak5DaysAfterFhm: previous complete",
+      "cycle": "mucusPeak5DaysAfterFhm",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-01",
+        "periStart": "2018-06-02",
+        "periEnd": "2018-06-22",
+        "postStart": "2018-06-22",
+        "firstHigh": "2018-06-19",
+        "tempEnd": "2018-06-22",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-09",
+        "mucusEnd": "2018-06-14"
+      }
+    },
+    {
+      "label": "highestMucusQualityAfterEndOfEval: no previous",
+      "cycle": "highestMucusQualityAfterEndOfEval",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-26",
+        "postStart": "2018-06-26",
+        "firstHigh": "2018-06-19",
+        "tempEnd": "2018-06-22",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-21",
+        "mucusEnd": "2018-06-26"
+      }
+    },
+    {
+      "label": "highestMucusQualityAfterEndOfEval: previous complete",
+      "cycle": "highestMucusQualityAfterEndOfEval",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-01",
+        "periStart": "2018-06-02",
+        "periEnd": "2018-06-26",
+        "postStart": "2018-06-26",
+        "firstHigh": "2018-06-19",
+        "tempEnd": "2018-06-22",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-21",
+        "mucusEnd": "2018-06-26"
+      }
+    },
+    {
+      "label": "fhm5DaysAfterMucusPeak: no previous",
+      "cycle": "fhm5DaysAfterMucusPeak",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-14",
+        "mucusEnd": "2018-06-17"
+      }
+    },
+    {
+      "label": "fhm5DaysAfterMucusPeak: previous complete",
+      "cycle": "fhm5DaysAfterMucusPeak",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-14",
+        "mucusEnd": "2018-06-17"
+      }
+    },
+    {
+      "label": "fhmOnDay12: no previous",
+      "cycle": "fhmOnDay12",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-18",
+        "postStart": "2018-06-18",
+        "firstHigh": "2018-06-12",
+        "tempEnd": "2018-06-17",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-12",
+        "mucusEnd": "2018-06-18"
+      }
+    },
+    {
+      "label": "fhmOnDay12: previous complete",
+      "cycle": "fhmOnDay12",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-18",
+        "postStart": "2018-06-18",
+        "firstHigh": "2018-06-12",
+        "tempEnd": "2018-06-17",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-12",
+        "mucusEnd": "2018-06-18"
+      }
+    },
+    {
+      "label": "fhmOnDay15: no previous",
+      "cycle": "fhmOnDay15",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-18",
+        "postStart": "2018-06-18",
+        "firstHigh": "2018-06-15",
+        "tempEnd": "2018-06-17",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-15",
+        "mucusEnd": "2018-06-18"
+      }
+    },
+    {
+      "label": "fhmOnDay15: previous complete",
+      "cycle": "fhmOnDay15",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-18",
+        "postStart": "2018-06-18",
+        "firstHigh": "2018-06-15",
+        "tempEnd": "2018-06-17",
+        "rule": 0,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-15",
+        "mucusEnd": "2018-06-18"
+      }
+    },
+    {
+      "label": "mucusPeakSlightlyBeforeTempShift: no previous",
+      "cycle": "mucusPeakSlightlyBeforeTempShift",
+      "previous": null,
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-17",
+        "postStart": "2018-06-17",
+        "firstHigh": "2018-06-14",
+        "tempEnd": "2018-06-17",
+        "rule": 1,
+        "coverLine": 36.55,
+        "mucusPeak": "2018-06-13",
+        "mucusEnd": "2018-06-16"
+      }
+    },
+    {
+      "label": "mucusPeakSlightlyBeforeTempShift: previous complete",
+      "cycle": "mucusPeakSlightlyBeforeTempShift",
+      "previous": "cycleWithFhm",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-17",
+        "postStart": "2018-06-17",
+        "firstHigh": "2018-06-14",
+        "tempEnd": "2018-06-17",
+        "rule": 1,
+        "coverLine": 36.55,
+        "mucusPeak": "2018-06-13",
+        "mucusEnd": "2018-06-16"
+      }
+    },
+    {
+      "label": "minus 8 shortens with one early FHM",
+      "cycle": "longAndComplicatedCycle",
+      "previous": "fhmOnDay12",
+      "earlier": [],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-04",
+        "periStart": "2018-06-05",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    },
+    {
+      "label": "minus 8 shortens among 11 FHMs",
+      "cycle": "longAndComplicatedCycle",
+      "previous": "fhmOnDay15",
+      "earlier": [
+        "fhmOnDay12",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15"
+      ],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-04",
+        "periStart": "2018-06-05",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    },
+    {
+      "label": "minus 8 does not extend with 11 FHMs",
+      "cycle": "longAndComplicatedCycle",
+      "previous": "fhmOnDay15",
+      "earlier": [
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15"
+      ],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-05",
+        "periStart": "2018-06-06",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    },
+    {
+      "label": "minus 8 extends with 12 FHMs",
+      "cycle": "longAndComplicatedCycle",
+      "previous": "fhmOnDay15",
+      "earlier": [
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15"
+      ],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-07",
+        "periStart": "2018-06-08",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    },
+    {
+      "label": "early mucus ends pre-phase",
+      "cycle": "cycleWithEarlyMucus",
+      "previous": "fhmOnDay12",
+      "earlier": [
+        "fhmOnDay12",
+        "fhmOnDay12",
+        "fhmOnDay12",
+        "fhmOnDay12",
+        "fhmOnDay12",
+        "fhmOnDay12",
+        "fhmOnDay12",
+        "fhmOnDay12",
+        "fhmOnDay12",
+        "fhmOnDay12"
+      ],
+      "expected": {
+        "preStart": "2018-06-01",
+        "preEnd": "2018-06-01",
+        "periStart": "2018-06-02",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "mucus on day one removes pre-phase",
+      "cycle": "cycleWithMucusOnFirstDay",
+      "previous": "fhmOnDay12",
+      "earlier": [],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": null,
+        "postStart": null,
+        "firstHigh": null,
+        "tempEnd": null,
+        "rule": null,
+        "coverLine": null,
+        "mucusPeak": null,
+        "mucusEnd": null
+      }
+    },
+    {
+      "label": "no pre-phase without previous combined shift",
+      "cycle": "longAndComplicatedCycle",
+      "previous": "cycleWithoutFhm",
+      "earlier": [
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15",
+        "fhmOnDay15"
+      ],
+      "expected": {
+        "preStart": null,
+        "preEnd": null,
+        "periStart": "2018-06-01",
+        "periEnd": "2018-06-21",
+        "postStart": "2018-06-21",
+        "firstHigh": "2018-06-18",
+        "tempEnd": "2018-06-21",
+        "rule": 1,
+        "coverLine": 36.8,
+        "mucusPeak": "2018-06-18",
+        "mucusEnd": "2018-06-21"
+      }
+    }
+  ]
+}
