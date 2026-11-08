@@ -12,8 +12,8 @@ class ActionResult {
     required this.romanceScore,
     required List<String> foodSuggestions,
     required List<ActionCard> cards,
-  }) : foodSuggestions = List.unmodifiable(foodSuggestions),
-       cards = List.unmodifiable(cards);
+  })  : foodSuggestions = List.unmodifiable(foodSuggestions),
+        cards = List.unmodifiable(cards);
 
   final int conversationScore;
   final int romanceScore;

@@ -11,8 +11,8 @@ int calendarDaysBetween(DateTime start, DateTime end) =>
 /// An inclusive range of calendar dates.
 class DateRange {
   DateRange(DateTime start, DateTime end)
-    : start = calendarDate(start),
-      end = calendarDate(end) {
+      : start = calendarDate(start),
+        end = calendarDate(end) {
     if (this.end.isBefore(this.start)) {
       throw ArgumentError('The end of a date range cannot precede its start.');
     }

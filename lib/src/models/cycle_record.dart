@@ -3,7 +3,7 @@ import 'calendar_date.dart';
 /// One recorded period start and, if known, its bleeding duration in days.
 class CycleRecord {
   CycleRecord({required DateTime startDate, this.periodDuration})
-    : startDate = calendarDate(startDate) {
+      : startDate = calendarDate(startDate) {
     if (periodDuration != null && periodDuration! < 1) {
       throw ArgumentError.value(
         periodDuration,

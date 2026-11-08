@@ -10,8 +10,8 @@ class PredictionResult {
     required this.windowDays,
     required List<EngineOutput> contributingEngines,
     this.isObserved = false,
-  }) : predictedDate = calendarDate(predictedDate),
-       contributingEngines = List.unmodifiable(contributingEngines);
+  })  : predictedDate = calendarDate(predictedDate),
+        contributingEngines = List.unmodifiable(contributingEngines);
 
   final DateTime predictedDate;
   final int cycleLength;
@@ -21,7 +21,7 @@ class PredictionResult {
   final bool isObserved;
 
   DateRange get window => DateRange(
-    addCalendarDays(predictedDate, -windowDays),
-    addCalendarDays(predictedDate, windowDays),
-  );
+        addCalendarDays(predictedDate, -windowDays),
+        addCalendarDays(predictedDate, windowDays),
+      );
 }
