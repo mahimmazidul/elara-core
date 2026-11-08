@@ -1,3 +1,11 @@
+// Copyright (c) 2026 Md. Mazidul Islam Mahim
+// ELARA-core — Ensemble Menstrual Cycle Prediction Engine
+// https://github.com/mahimmazidul/elara-core
+//
+// Original work by the author. Not derived from any ported engine.
+// Licensed under Apache 2.0. See LICENSES/Apache-2.0.txt for details.
+// The combined elara-core package is distributed under AGPL-3.0; see LICENSE.
+
 import 'dart:io';
 
 import 'package:elara_core/elara_core.dart';

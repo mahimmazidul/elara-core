@@ -1,3 +1,11 @@
+// Original work: Flowlytics by its contributors
+// https://github.com/harshit2k4/flowlytics
+// Original license: GNU AGPL v3.0
+//
+// Adapted for ELARA by Md. Mazidul Islam Mahim, 2026.
+// Prediction and navigator logic restructured for the Dart package.
+// See ATTRIBUTION.md for full details.
+
 // Adapted from Flowlytics' enhanced prediction and navigator engines.
 // Flowlytics is AGPL-3.0; see ATTRIBUTION.md for the source and notices.
 import 'dart:math' as math;

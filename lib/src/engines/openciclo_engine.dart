@@ -1,3 +1,11 @@
+// Original work: OpenCiclo by Emma Flora Harbison and Luis Rey Sánchez
+// https://github.com/OpenCiclo/OpenCiclo-web
+// Original license: Apache 2.0
+//
+// Ported to Dart by Md. Mazidul Islam Mahim, 2026.
+// Adapts the released Bayesian shrinkage and Laplace forecast for ELARA.
+// See ATTRIBUTION.md for full details.
+
 // Based on OpenCiclo, Copyright 2026 Emma Flora Harbison & Luis Rey Sánchez.
 // SPDX-License-Identifier: Apache-2.0
 // The upstream notice and license are retained in ATTRIBUTION.md and LICENSES/.

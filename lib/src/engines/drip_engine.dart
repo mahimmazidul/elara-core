@@ -1,3 +1,13 @@
+// Original work: drip and sympto by the bloodyhealth contributors
+// https://gitlab.com/bloodyhealth/drip
+// https://gitlab.com/bloodyhealth/sympto
+// Original licenses: GPL-3.0-or-later and AGPL-3.0-or-later, respectively.
+//
+// Sympto-thermal detection logic ported to Dart by Md. Mazidul Islam Mahim, 2026.
+// The period prediction bridge (_builtInBridge) is original ELARA work by
+// Md. Mazidul Islam Mahim; it is an ELARA heuristic, not part of drip's method.
+// See ATTRIBUTION.md for full details.
+
 // Adapted from bloodyhealth/drip and its sympto 3.0.2 library.
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // See ATTRIBUTION.md and LICENSES/ for sources, authors and license notices.

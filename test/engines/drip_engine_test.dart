@@ -1,3 +1,11 @@
+// Original test cases: sympto by the bloodyhealth contributors.
+// https://gitlab.com/bloodyhealth/sympto
+// Original license: GNU AGPL-3.0-or-later.
+//
+// Dart test adaptation copyright (c) 2026 Md. Mazidul Islam Mahim.
+// ELARA-core — Ensemble Menstrual Cycle Prediction Engine
+// Distributed under AGPL-3.0. See LICENSE and ATTRIBUTION.md for details.
+
 import 'dart:convert';
 import 'dart:io';
 

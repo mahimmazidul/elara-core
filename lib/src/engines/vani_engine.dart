@@ -1,3 +1,10 @@
+// Original work: Vani by nkrider7
+// https://github.com/nkrider7/vani
+// Original license: MIT, as stated in the upstream README.
+//
+// Inspected by Md. Mazidul Islam Mahim, 2026. Vani was not ported.
+// See ATTRIBUTION.md for full details.
+
 // Vani inspection: https://github.com/nkrider7/vani, commit e5f69dc.
 // Its calendar strategy is a mean and its default strategy is a weighted mean,
 // with standard-deviation-based confidence/window and an irregularity note.
