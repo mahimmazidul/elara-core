@@ -9,3 +9,4 @@ export 'src/models/phase_result.dart';
 export 'src/models/prediction_result.dart';
 export 'src/models/severity_result.dart';
 export 'src/engines/engine_interface.dart';
+export 'src/engines/openciclo_engine.dart';
