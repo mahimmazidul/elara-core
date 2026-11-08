@@ -1,0 +1,8 @@
+elara-core incorporates or adapts work from the projects listed in
+ATTRIBUTION.md. The combined package is distributed under AGPL-3.0.
+
+The OpenCiclo portion retains its original Apache-2.0 license and notice;
+see LICENSES/Apache-2.0.txt and LICENSES/OpenCiclo-NOTICE.txt. References
+in that upstream notice to "this product" describe OpenCiclo, not the
+license of the combined elara-core package. The original OpenCiclo and
+Ciclo trademarks and logo are not licensed for use here.

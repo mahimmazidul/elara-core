@@ -1,0 +1,19 @@
+OpenCiclo
+Copyright © 2026 Emma Flora Harbison & Luis Rey Sánchez
+
+This product is licensed under the Apache License, Version 2.0.
+See the LICENSE file for the full license text.
+
+Ciclo
+Built by Emma Flora Harbison & Luis Rey Sánchez
+Copyright © 2026
+Apache License 2.0
+
+Trademarks
+OpenCiclo, Ciclo and the round-sea logo are trademarks of Emma Flora
+Harbison and Luis Rey Sánchez. The Apache License does not cover them, and
+the logo artwork is not licensed under it (all rights reserved). See
+TRADEMARKS.md for what is allowed and how to rebrand a fork.
+
+Ciclo provides cycle forecasts. Forecasts can be wrong. Ciclo is not a
+medical device, diagnosis system, or contraceptive method.
