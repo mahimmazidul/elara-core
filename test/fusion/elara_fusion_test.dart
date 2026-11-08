@@ -122,6 +122,19 @@ void main() {
         throwsStateError);
   });
 
+  test('an output cannot represent less than one calendar day', () {
+    expect(
+      () => EngineOutput(
+        engineName: 'bad',
+        predictedDate: start,
+        predictedLength: .4,
+        confidence: .5,
+        windowDays: 1,
+      ),
+      throwsArgumentError,
+    );
+  });
+
   test('confirmed Flowlytics observation overrides OpenCiclo in the ensemble',
       () {
     final longHistory = historyFor([28, 28, 28]);

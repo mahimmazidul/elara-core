@@ -12,18 +12,18 @@ class EngineOutput {
     Map<int, double>? lengthProbabilities,
     this.modelPoint,
     this.modelScale,
-  }) : predictedDate = calendarDate(predictedDate),
-       lengthProbabilities = lengthProbabilities == null
-           ? null
-           : Map.unmodifiable(lengthProbabilities) {
+  })  : predictedDate = calendarDate(predictedDate),
+        lengthProbabilities = lengthProbabilities == null
+            ? null
+            : Map.unmodifiable(lengthProbabilities) {
     if (engineName.trim().isEmpty) {
       throw ArgumentError('engineName cannot be empty');
     }
-    if (!predictedLength.isFinite || predictedLength <= 0) {
+    if (!predictedLength.isFinite || predictedLength < 1) {
       throw ArgumentError.value(
         predictedLength,
         'predictedLength',
-        'must be positive and finite',
+        'must be finite and at least one day',
       );
     }
     if (!confidence.isFinite || confidence < 0 || confidence > 1) {

@@ -33,6 +33,18 @@ void main() {
     expect((action.conversationScore, action.romanceScore), (2, 3));
   });
 
+  test('calendar arithmetic ignores clock time and daylight-saving changes',
+      () {
+    final history = [
+      CycleRecord(startDate: DateTime(2024, 3, 9, 23, 59)),
+      CycleRecord(startDate: DateTime(2024, 4, 6, 0, 1)),
+    ];
+    final forecast = FlowlyticsEngine().predict(history)!;
+    expect(forecast.predictedLength, 28);
+    expect(history.last.startDate, DateTime.utc(2024, 4, 6));
+    expect(forecast.predictedDate, DateTime.utc(2024, 5, 4));
+  });
+
   test('a newly reported period start can be used to begin a new phase', () {
     final history = historyFor([28, 28, 28]);
     final observed = day(history.last.startDate, 25);
