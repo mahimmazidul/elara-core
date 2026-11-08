@@ -4,15 +4,15 @@ elara-core is a pure Dart package that combines open-source menstrual cycle pred
 
 ## Why it exists
 
-Elara is an offline, partner-facing menstrual cycle tracker built for husbands. The app runs entirely on-device with no cloud, account or server, and this package is its prediction and decision engine. Bangladesh's heat index, humidity and air quality are part of the environmental inputs, with heat index and PM2.5 contributing to the severity calculation.
+Elara is an offline, partner-facing menstrual cycle tracker built for husbands. The app runs entirely on-device, and this package is its prediction and decision engine. Bangladesh's heat index, humidity and air quality are part of the environmental inputs, with heat index and PM2.5 contributing to the severity calculation.
 
 ## How it works
 
 OpenCiclo and Flowlytics run independently on the same period-start history. Their cycle-length predictions are weighted by confidence and merged into a forecast with an uncertainty window. OpenCiclo contributes a Bayesian shrinkage estimate based on a released population prior. Flowlytics contributes a recency-weighted average and symptom-based adjustments.
 
-drip is dormant by default and, when enabled with temperature and mucus readings, contributes symptothermal shift analysis and can use an opt-in ELARA bridge for a period estimate. Vani was inspected but not added to the ensemble because its weighted mean overlaps Flowlytics.
+drip is dormant by default and, when enabled with temperature and mucus readings, contributes symptothermal shift analysis and can use an opt-in ELARA bridge for a period estimate. The Vani review found a weighted mean that overlaps Flowlytics.
 
-The forecast feeds a deterministic phase classifier, an environmental severity calculation, and an action engine that returns conversation and romance scores, food ideas and cards. The severity calculation uses heat index, PM2.5, sunshine, season and hydration; humidity and AQI category remain available as context but do not add independent modifiers. Confidence values are heuristic scores, and the fertile window is a calendar estimate.
+The forecast feeds a deterministic phase classifier, an environmental severity calculation, and an action engine that returns conversation and romance scores, food ideas and cards. The severity calculation uses heat index, PM2.5, sunshine, season and hydration, while humidity and AQI category remain available as context. Confidence values are heuristic scores, and the fertile window is a calendar estimate.
 
 ## Using it
 
@@ -58,7 +58,7 @@ void main() {
 ## Running the tests
 
 Run `dart pub get && dart analyze && dart test` from the package directory.
-A passing run reports no analyzer issues and ends with `All tests passed!`.
+A passing run reports a clean analysis and ends with `All tests passed!`.
 
 ## Attribution
 
