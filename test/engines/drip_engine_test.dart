@@ -247,9 +247,21 @@ void main() {
           config: const DripEngineConfig(enabled: true, useBuiltInBridge: true),
           bbt: [],
           mucus: []);
-      expect(empty.isActive, isTrue);
-      expect(empty.detect(history)!.ovulationDetected, isFalse);
+      expect(empty.isActive, isFalse);
+      expect(empty.detect(history), isNull);
       expect(empty.predict(history), isNull);
+      var bridgeCalled = false;
+      final missingBbt = DripEngine(
+        config: const DripEngineConfig(enabled: true),
+        bbt: [],
+        mucus: readings.mucus,
+        periodBridge: (_) {
+          bridgeCalled = true;
+          return null;
+        },
+      );
+      expect(missingBbt.predict(history), isNull);
+      expect(bridgeCalled, isFalse);
       final excluded = DripEngine(
         config: const DripEngineConfig(enabled: true, useBuiltInBridge: true),
         bbt: [
@@ -258,6 +270,7 @@ void main() {
         ],
         mucus: readings.mucus,
       );
+      expect(excluded.isActive, isFalse);
       expect(excluded.predict(history), isNull);
     });
   });

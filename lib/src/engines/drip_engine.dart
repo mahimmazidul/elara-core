@@ -135,7 +135,7 @@ class DripEngineConfig {
   final bool useBuiltInBridge;
 }
 
-/// Dormant until explicitly enabled and both observation series are supplied.
+/// Dormant until enabled and both series contain at least one usable reading.
 class DripEngine implements CyclePredictionEngine {
   DripEngine({
     this.config = const DripEngineConfig(),
@@ -157,7 +157,12 @@ class DripEngine implements CyclePredictionEngine {
   String get name => 'drip';
 
   @override
-  bool get isActive => config.enabled && bbt != null && mucus != null;
+  bool get isActive =>
+      config.enabled &&
+      bbt != null &&
+      mucus != null &&
+      bbt!.any((reading) => !reading.excluded) &&
+      mucus!.any((reading) => !reading.excluded);
 
   /// Analyze all available observations for the most recent cycle.
   DripDetectionResult? detect(List<CycleRecord> history) {
