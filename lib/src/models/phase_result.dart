@@ -30,7 +30,10 @@ class PhaseResult {
   final int cycleDay;
   final int ovulationDay;
   final DateRange fertileWindow;
-  final bool isFertile;
+
+  /// Whether the date is in the modeled window; null when the cycle is overdue.
+  /// This is not confirmation of fertility or infertility.
+  final bool? isFertile;
   final LutealSubphase? lutealSubphase;
 
   /// Signed day counts: a negative value means the estimate is overdue/past.

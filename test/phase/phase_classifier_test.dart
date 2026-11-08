@@ -57,6 +57,7 @@ void main() {
     final due = classify(29);
     expect(due.phase, CyclePhase.unknown);
     expect(due.phaseDay, isNull);
+    expect(due.isFertile, isNull);
     expect(due.daysUntilPeriod, 0);
     expect(classify(30).daysUntilPeriod, -1);
   });

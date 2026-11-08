@@ -70,7 +70,7 @@ class PhaseClassifier {
       cycleDay: day,
       ovulationDay: ovulation,
       fertileWindow: window,
-      isFertile: window.contains(date),
+      isFertile: phase == CyclePhase.unknown ? null : window.contains(date),
       lutealSubphase: subphase,
       daysUntilPeriod: cycleLength - elapsed,
       daysUntilOvulation: ovulation - day,
