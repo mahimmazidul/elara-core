@@ -10,6 +10,8 @@ Elara is an offline, partner-facing menstrual cycle tracker built for husbands. 
 
 OpenCiclo and Flowlytics run independently on the same period-start history. Their cycle-length predictions are weighted by confidence and merged into a forecast with an uncertainty window. OpenCiclo contributes a Bayesian shrinkage estimate based on a released population prior. Flowlytics contributes a recency-weighted average and symptom-based adjustments.
 
+An experimental personal-history adjustment can be enabled with `ElaraFusion(experimentalPersonalization: true)`. It blends the consensus with a bounded estimate from completed cycles. The [backtest report](test/backtest/IMPROVEMENT.md) describes its evaluation and observed results.
+
 drip is dormant by default and, when enabled with temperature and mucus readings, contributes symptothermal shift analysis and can use an opt-in ELARA bridge for a period estimate. The Vani review found a weighted mean that overlaps Flowlytics.
 
 The forecast feeds a deterministic phase classifier, an environmental severity calculation, and an action engine that returns conversation and romance scores, food ideas and cards. The severity calculation uses heat index, PM2.5, sunshine, season and hydration, while humidity and AQI category remain available as context. Confidence values are heuristic scores, and the fertile window is a calendar estimate.

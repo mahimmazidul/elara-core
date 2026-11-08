@@ -1,3 +1,11 @@
+# Copyright (c) 2026 Md. Mazidul Islam Mahim
+# ELARA-core — Ensemble Menstrual Cycle Prediction Engine
+# https://github.com/mahimmazidul/elara-core
+#
+# Original work by the author. Not derived from any ported engine.
+# Licensed under Apache 2.0. See LICENSES/Apache-2.0.txt for details.
+# The combined elara-core package is distributed under AGPL-3.0; see LICENSE.
+
 """Synthetic invariants for the independent public-data evaluation harness."""
 import csv
 import datetime as dt
@@ -121,7 +129,7 @@ class ActualDartEngineTests(unittest.TestCase):
         self.assertTrue(all(p["score"] == elara[0]["score"] for p in elara))
         self.assertEqual([p["error_days"] for p in elara], [0, -15, 7])
         compared = subprocess.run(
-            [os.environ.get("DART", "dart"), "run", "test/backtest/compare_forecasts.dart"],
+            [os.environ.get("DART", "dart"), "run", "test/backtest/compare_forecasts.dart", "--verify-production"],
             cwd=ROOT, input="".join(json.dumps(c) + "\n" for c in cases),
             text=True, capture_output=True, check=True,
         )

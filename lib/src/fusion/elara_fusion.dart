@@ -18,9 +18,15 @@ import '../models/engine_output.dart';
 import '../models/prediction_result.dart';
 
 /// Confidence-weighted consensus. Scores are not clinically calibrated.
+///
+/// [experimentalPersonalization] enables a bounded adjustment to the point
+/// estimate based on earlier completed cycles. It is disabled by default;
+/// the evaluation and limitations are in `test/backtest/IMPROVEMENT.md`.
 class ElaraFusion {
-  ElaraFusion({List<CyclePredictionEngine>? engines})
-      : engines = List.unmodifiable(engines ??
+  ElaraFusion({
+    List<CyclePredictionEngine>? engines,
+    this.experimentalPersonalization = false,
+  }) : engines = List.unmodifiable(engines ??
             [
               OpenCicloEngine(),
               FlowlyticsEngine(),
@@ -28,9 +34,10 @@ class ElaraFusion {
             ]);
 
   final List<CyclePredictionEngine> engines;
+  final bool experimentalPersonalization;
 
   PredictionResult? predict(List<CycleRecord> history) {
-    completedCycleLengths(history);
+    final historyLengths = completedCycleLengths(history);
     if (history.isEmpty) return null;
     final start = history.last.startDate;
     final results = <EngineOutput>[];
@@ -70,12 +77,16 @@ class ElaraFusion {
     if (weighted.isEmpty) return null;
     if (weighted.length == 1) {
       final only = weighted.single;
-      return PredictionResult(
-        predictedDate: only.predictedDate,
-        cycleLength: only.predictedLength.round(),
-        confidence: only.confidence * 0.8,
-        windowDays: only.windowDays,
-        contributingEngines: weighted,
+      return _personalize(
+        PredictionResult(
+          predictedDate: only.predictedDate,
+          cycleLength: only.predictedLength.round(),
+          confidence: only.confidence * 0.8,
+          windowDays: only.windowDays,
+          contributingEngines: weighted,
+        ),
+        historyLengths,
+        start,
       );
     }
 
@@ -101,12 +112,48 @@ class ElaraFusion {
     final confidence =
         (averageConfidence / (1 + disagreement / 5)).clamp(0.0, 1.0);
     final cycleLength = mean.round();
+    return _personalize(
+      PredictionResult(
+        predictedDate: addCalendarDays(start, cycleLength),
+        cycleLength: cycleLength,
+        confidence: confidence,
+        windowDays: window,
+        contributingEngines: weighted,
+      ),
+      historyLengths,
+      start,
+    );
+  }
+
+  PredictionResult _personalize(
+    PredictionResult baseline,
+    List<int> historyLengths,
+    DateTime start,
+  ) {
+    if (!experimentalPersonalization || historyLengths.isEmpty) return baseline;
+    final sorted = [...historyLengths]..sort();
+    final count = sorted.length;
+    final middle = count ~/ 2;
+    final median = count.isOdd
+        ? sorted[middle].toDouble()
+        : (sorted[middle - 1] + sorted[middle]) / 2;
+
+    // Selected on Utah development participants; the held-out comparison and
+    // license are recorded in test/backtest/IMPROVEMENT.md. This is a point
+    // adjustment, not a calibrated probability or guarantee of improvement.
+    final personalPoint = (count * median + 28) / (count + 1);
+    final blended =
+        (0.25 * baseline.cycleLength + 0.75 * personalPoint).round();
+    final lower = math.max(1, baseline.cycleLength - 3);
+    final upper = baseline.cycleLength + 3;
+    final adjusted = blended.clamp(lower, upper);
+    if (adjusted == baseline.cycleLength) return baseline;
     return PredictionResult(
-      predictedDate: addCalendarDays(start, cycleLength),
-      cycleLength: cycleLength,
-      confidence: confidence,
-      windowDays: window,
-      contributingEngines: weighted,
+      predictedDate: addCalendarDays(start, adjusted),
+      cycleLength: adjusted,
+      confidence: baseline.confidence,
+      windowDays: baseline.windowDays,
+      contributingEngines: baseline.contributingEngines,
     );
   }
 }

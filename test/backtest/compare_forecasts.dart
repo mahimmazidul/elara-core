@@ -1,3 +1,11 @@
+// Copyright (c) 2026 Md. Mazidul Islam Mahim
+// ELARA-core — Ensemble Menstrual Cycle Prediction Engine
+// https://github.com/mahimmazidul/elara-core
+//
+// Original work by the author. Not derived from any ported engine.
+// Licensed under Apache 2.0. See LICENSES/Apache-2.0.txt for details.
+// The combined elara-core package is distributed under AGPL-3.0; see LICENSE.
+
 // Compare the real baseline Dart ensemble to a frozen experimental candidate.
 // Input/output contain participant-level data: keep them private.
 import 'dart:convert';
@@ -23,9 +31,11 @@ Map<String, Object> score(
   };
 }
 
-Future<void> main() async {
+Future<void> main(List<String> args) async {
   final baseline = historicalFusion();
   final candidate = FrozenCandidate();
+  final production = ElaraFusion(experimentalPersonalization: true);
+  final verifyProduction = args.contains('--verify-production');
   var count = 0;
   await for (final line
       in stdin.transform(utf8.decoder).transform(const LineSplitter())) {
@@ -42,6 +52,19 @@ Future<void> main() async {
     final after = candidate.predict(history);
     if (before == null || after == null) {
       throw StateError('Expected both forecasts');
+    }
+    if (verifyProduction) {
+      final deployed = production.predict(history);
+      if (deployed == null ||
+          deployed.predictedDate != after.predictedDate ||
+          deployed.cycleLength != after.cycleLength ||
+          deployed.windowDays != after.windowDays ||
+          deployed.confidence != after.confidence ||
+          deployed.isObserved != after.isObserved ||
+          deployed.contributingEngines.map((e) => e.engineName).join(',') !=
+              after.contributingEngines.map((e) => e.engineName).join(',')) {
+        throw StateError('Production and frozen candidate differ');
+      }
     }
     final truth = DateTime.parse('${item['actual_next_start']}T00:00:00Z');
     final last = history.last.startDate;

@@ -1,6 +1,6 @@
 # Public-data backtest
 
-`REPORT.md` records the original retrospective timing evaluation at commit `7457880b7d2c957de7aad103fabe79686fdf8a2d`. The two `*-audit.json` files and the two aggregate results JSON files preserve its inclusion counts and metrics. These files contain no raw participant records. Later model-development experiments, if any, are documented separately and must not be confused with this original baseline.
+`REPORT.md` records the original retrospective timing evaluation at commit `7457880b7d2c957de7aad103fabe79686fdf8a2d`. The two `*-audit.json` files and the two aggregate results JSON files preserve its inclusion counts and metrics. `IMPROVEMENT.md` documents the later opt-in candidate, held-out results and reproduction steps. These aggregate files contain no raw participant records.
 
 The [Utah/Creighton source](https://hive.utah.edu/records/3zhb1-48n69) is CC BY-NC with attribution; obtain additional permission when required for the intended use. The [Marquette source](https://epublications.marquette.edu/data_nfp/7/) states that participants consented to reuse, but does not clearly specify an open-data license. Check rights before use or redistribution. Do not commit the CSVs, person-level cases or predictions.
 

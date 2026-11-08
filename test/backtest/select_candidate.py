@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Md. Mazidul Islam Mahim
+# ELARA-core — Ensemble Menstrual Cycle Prediction Engine
+# https://github.com/mahimmazidul/elara-core
+#
+# Original work by the author. Not derived from any ported engine.
+# Licensed under Apache 2.0. See LICENSES/Apache-2.0.txt for details.
+# The combined elara-core package is distributed under AGPL-3.0; see LICENSE.
+
 """Select the predeclared history adjustment using development participants only.
 
 Input is the private output of prepare_utah.py and the matching predictions
