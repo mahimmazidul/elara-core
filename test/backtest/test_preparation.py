@@ -120,6 +120,18 @@ class ActualDartEngineTests(unittest.TestCase):
         self.assertEqual([p["window_days"] for p in elara], [2, 2, 2])
         self.assertTrue(all(p["score"] == elara[0]["score"] for p in elara))
         self.assertEqual([p["error_days"] for p in elara], [0, -15, 7])
+        compared = subprocess.run(
+            [os.environ.get("DART", "dart"), "run", "test/backtest/compare_forecasts.dart"],
+            cwd=ROOT, input="".join(json.dumps(c) + "\n" for c in cases),
+            text=True, capture_output=True, check=True,
+        )
+        paired = [json.loads(line) for line in compared.stdout.splitlines()]
+        self.assertEqual(len(paired), 3)
+        for method in ("baseline", "candidate"):
+            outputs = [row[method] for row in paired]
+            self.assertEqual(len({p["prediction_length"] for p in outputs}), 1)
+            self.assertEqual(len({p["window_days"] for p in outputs}), 1)
+            self.assertEqual(len({p["score"] for p in outputs}), 1)
 
 
 if __name__ == "__main__":

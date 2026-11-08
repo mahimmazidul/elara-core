@@ -1,0 +1,10 @@
+{
+  "development": {
+    "forecasts": 1825,
+    "participants": 350
+  },
+  "holdout": {
+    "forecasts": 731,
+    "participants": 147
+  }
+}
