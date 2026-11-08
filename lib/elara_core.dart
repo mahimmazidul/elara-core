@@ -11,3 +11,4 @@ export 'src/models/severity_result.dart';
 export 'src/engines/engine_interface.dart';
 export 'src/engines/openciclo_engine.dart';
 export 'src/engines/flowlytics_engine.dart';
+export 'src/engines/drip_engine.dart';
