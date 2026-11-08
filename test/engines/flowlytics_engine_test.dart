@@ -39,6 +39,19 @@ void main() {
       expect(stable.windowDays, 1);
     });
 
+    test('all upstream regularity confidence bands are represented', () {
+      final cases = <(List<int>, double)>[
+        ([27, 28, 29], .95),
+        ([26, 28, 30], .85),
+        ([24, 28, 32], .65),
+        ([22, 28, 34], .45),
+        ([18, 28, 38], .30),
+      ];
+      for (final c in cases) {
+        expect(FlowlyticsEngine().predict(historyFor(c.$1))!.confidence, c.$2);
+      }
+    });
+
     test('secondary symptoms nudge by one day only in the navigator window',
         () {
       final history = historyFor([28, 28, 28]);
