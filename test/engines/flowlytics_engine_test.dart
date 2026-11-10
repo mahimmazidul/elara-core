@@ -13,21 +13,56 @@ import '../support.dart';
 
 void main() {
   group('Flowlytics enhanced predictor', () {
-    test(
-        'uses only the six most recent weights but all valid gaps for deviation',
-        () {
+    test('weights the six most recent cycles for location and every gap for '
+        'dispersion', () {
       final result =
           FlowlyticsEngine().predict(historyFor([20, 24, 28, 32, 36, 40, 44]))!;
+      // Location: the six most recent intervals, recency-weighted.
       expect(result.predictedLength, 36);
+      // Dispersion: all seven, as a sample standard deviation of 8.64 days.
+      // The window used to be clamped to four days, which made a history that
+      // varied by three weeks look like a two-day uncertainty.
+      expect(result.windowDays, 9);
       expect(result.confidence, 0.30);
-      expect(result.windowDays, 4);
     });
 
-    test('keeps 15 through 50 inclusive and ignores other intervals', () {
+    test('an interval outside the plausibility band widens the window instead '
+        'of disappearing from it', () {
       final result = FlowlyticsEngine().predict(historyFor([14, 15, 50, 51]))!;
+      // The band still guards the *mean*: 15 and 50 only.
       expect(result.predictedLength, 33);
-      expect(result.confidence, 0.40);
-      expect(result.windowDays, 4);
+      // But all four intervals are evidence of how variable this history is.
+      // Dropping them from the spread is what used to make an irregular cycle
+      // report a regular one.
+      expect(result.windowDays, 21);
+      expect(result.confidence, 0.30);
+    });
+
+    test('a history entirely outside the band predicts her cycle, not the '
+        'baseline', () {
+      // A person whose recorded cycles are all longer than the band has shown
+      // that the band does not describe her. Answering with the 28-day default
+      // was the documented long-cycle failure.
+      final result = FlowlyticsEngine().predict(historyFor([55, 58, 57]))!;
+      expect(result.predictedLength, 57);
+      expect(result.windowDays, 2);
+    });
+
+    test('one long interval is uncertainty, not a deleted observation', () {
+      final result =
+          FlowlyticsEngine().predict(historyFor([28, 28, 28, 63]))!;
+      // The mean stays on the three in-band cycles...
+      expect(result.predictedLength, 28);
+      // ...and the miss shows up where a user can act on it.
+      expect(result.windowDays, greaterThan(10));
+      expect(result.confidence, 0.30);
+    });
+
+    test('the window is capped at the span a calendar estimate can address',
+        () {
+      final result =
+          FlowlyticsEngine().predict(historyFor([16, 50, 19, 49, 17, 48]))!;
+      expect(result.windowDays, lessThanOrEqualTo(60));
     });
 
     test('uses baseline with one start; no clock-based empty-history forecast',
@@ -48,11 +83,13 @@ void main() {
     });
 
     test('all upstream regularity confidence bands are represented', () {
+      // The bands are entered by a sample standard deviation (n-1), so a
+      // three-cycle history needs a spread under a day for the top band.
       final cases = <(List<int>, double)>[
-        ([27, 28, 29], .95),
-        ([26, 28, 30], .85),
-        ([24, 28, 32], .65),
-        ([22, 28, 34], .45),
+        ([28, 28, 29], .95),
+        ([27, 28, 29], .85),
+        ([26, 28, 30], .65),
+        ([24, 28, 32], .45),
         ([18, 28, 38], .30),
       ];
       for (final c in cases) {

@@ -51,6 +51,19 @@ class FlowlyticsEngine implements CyclePredictionEngine {
   final int baselineCycle;
   final FlowSymptoms? symptoms;
 
+  /// The in-band range upstream Flowlytics used to keep one improbable entry
+  /// out of its mean. Applied to the mean only; see [predict].
+  static const int minimumPlausibleLength = 15;
+  static const int maximumPlausibleLength = 50;
+
+  /// The widest window this component will report.
+  ///
+  /// Not a statistical constant: it is the span over which a calendar estimate
+  /// carries any information at all. Beyond it the honest answer is that this
+  /// engine cannot place the next start, and the fusion layer should say so
+  /// rather than print a radius with no relationship to the data.
+  static const int maximumWindowDays = 60;
+
   @override
   String get name => 'Flowlytics';
 
@@ -59,14 +72,29 @@ class FlowlyticsEngine implements CyclePredictionEngine {
 
   @override
   EngineOutput? predict(List<CycleRecord> history) {
-    final lengths = completedCycleLengths(history)
-        .where((length) => length >= 15 && length <= 50)
+    // Every completed interval is kept. Upstream Flowlytics used a 15-50 day
+    // band to keep one wild entry out of the mean, which is a reasonable guard
+    // for *location* and a catastrophic one for *dispersion*: dropping the
+    // observations that make a cycle irregular makes an irregular cycle look
+    // regular, and the uncertainty the engine reports then describes a history
+    // the user does not have. The band is applied to the mean only, below.
+    final allLengths = completedCycleLengths(history);
+    final plausible = allLengths
+        .where((length) =>
+            length >= minimumPlausibleLength &&
+            length <= maximumPlausibleLength)
         .toList();
     // Flowlytics uses today's date for an empty log. We have no clock input,
     // so without a start date there is no anchored forecast to return.
     if (history.isEmpty) return null;
 
-    final recent = lengths.reversed.take(6).toList();
+    // The band is inapplicable when it excludes everything: a person whose
+    // recorded cycles are all longer than 50 days has shown that her normal
+    // cycle is longer than the band, and answering with the 28-day baseline
+    // would be a guess dressed as arithmetic. Use the observations instead.
+    final locations = plausible.isEmpty ? allLengths : plausible;
+
+    final recent = locations.reversed.take(6).toList();
     var weightedSum = 0.0;
     var totalWeight = 0.0;
     for (var i = 0; i < recent.length; i++) {
@@ -76,15 +104,20 @@ class FlowlyticsEngine implements CyclePredictionEngine {
     }
     final average =
         recent.isEmpty ? baselineCycle : (weightedSum / totalWeight).round();
-    final deviation = lengths.length < 2
-        ? 1.5
-        : math.sqrt(lengths.fold<double>(0, (sum, value) {
-              final difference = value - average;
-              return sum + difference * difference;
-            }) /
-            lengths.length);
-    final windowDays = deviation.round().clamp(1, 4);
-    final confidence = _confidence(deviation, lengths.length);
+
+    // Dispersion over every observation, around its own centre, with Bessel's
+    // correction. Two corrections to what this used to do:
+    //
+    //   * the spread is no longer measured against a recency-weighted, rounded
+    //     location, which understated it whenever the two disagreed;
+    //   * it is no longer measured only over the in-band subset.
+    //
+    // With one completed interval there is nothing to measure, so the upstream
+    // default stands.
+    final deviation =
+        allLengths.length < 2 ? 1.5 : _sampleStandardDeviation(allLengths);
+    final windowDays = deviation.ceil().clamp(1, maximumWindowDays);
+    final confidence = _confidence(deviation, allLengths.length);
     final start = history.last.startDate;
     var predictedDate = addCalendarDays(start, average);
     var observedStart = false;
@@ -131,6 +164,17 @@ class FlowlyticsEngine implements CyclePredictionEngine {
 
 bool _hasAny(List<String> values, Set<String> choices) =>
     values.any(choices.contains);
+
+/// Sample standard deviation (n-1), the unbiased estimate of a person's own
+/// cycle-to-cycle variability. Returns 0 for a constant history, which the
+/// caller floors to a one-day window.
+double _sampleStandardDeviation(List<int> values) {
+  final mean =
+      values.fold<double>(0, (sum, value) => sum + value) / values.length;
+  final sumSquares = values.fold<double>(
+      0, (sum, value) => sum + (value - mean) * (value - mean));
+  return math.sqrt(sumSquares / (values.length - 1));
+}
 
 double _confidence(double deviation, int count) {
   if (count < 3) return 0.40;
